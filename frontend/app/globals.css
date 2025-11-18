@@ -1,0 +1,222 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #040407;
+  color: #e7e7ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 45%, #000 80%);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.hero p {
+  margin: 0;
+  color: #96a2ff;
+}
+
+.search-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  background: rgba(13, 18, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.search-panel label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ea9d7;
+}
+
+.search-panel input,
+.search-panel button,
+.search-panel select {
+  margin-top: 0.4rem;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+}
+
+.search-panel button {
+  background: linear-gradient(120deg, #5ddcff, #3c7bff 60%, #933cff);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-panel button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 30px rgba(111, 139, 255, 0.4);
+}
+
+.search-panel .actions {
+  display: flex;
+  align-items: flex-end;
+}
+
+.search-panel .actions button {
+  margin-top: 0;
+}
+
+.routes-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.route-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(12, 15, 25, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+.route-card img,
+.route-card .preview {
+  width: 100%;
+  min-height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.route-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.2rem;
+}
+
+.route-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #9fb0ff;
+  font-size: 0.95rem;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.badge {
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(147, 60, 255, 0.15);
+  color: #d4b5ff;
+}
+
+.score-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(93, 220, 255, 0.15);
+  color: #7be4ff;
+  font-size: 0.85rem;
+}
+
+.route-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.route-footer button {
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 600;
+  background: rgba(93, 220, 255, 0.12);
+  color: #5ddcff;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress-value {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.tradeoff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tradeoff-card {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tradeoff-card strong {
+  display: block;
+  color: #9fb0ff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tradeoff-card span {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .route-card {
+    grid-template-columns: 1fr;
+  }
+
+  .route-card img,
+  .route-card .preview {
+    min-height: 180px;
+  }
+}

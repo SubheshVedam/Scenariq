@@ -1,0 +1,6 @@
+node_modules/
+.next/
+frontend/.next/
+frontend/node_modules/
+backend/target/
+.DS_Store
