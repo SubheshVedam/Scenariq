@@ -3,4 +3,5 @@ node_modules/
 frontend/.next/
 frontend/node_modules/
 backend/target/
+backend/.env
 .DS_Store
